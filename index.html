@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bikcraft - bicicletas eletricas</title>
     <meta name="description" content="Bikcraft - bicicletas eletricas">
-    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="./css/style.min.css" as="style">
+    <link rel="stylesheet" href="./css/style.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -13,7 +17,7 @@
 <body>
     <header class="header-bg">
         <div class="header container">
-            <a href="./"><img src="./img/bikcraft.svg" alt="bikcraft"></a>
+            <a href="./"><img src="./img/bikcraft.svg" width="136" height="32" alt="bikcraft"></a>
             <nav aria-label="primaria">
                 <ul class="header-menu font-1-m cor-w">
                     <li><a href="./bicicletas.html">Bicicletas</a></li>
@@ -25,16 +29,17 @@
         </div>
         </header>
 
-    <main class="introducao-bg">
+    <main class="introducao-bg" >
         <div class="introducao container">
             <div class="introducao-conteudo">
-            <h1 class="font-1-xxl">Bicicletas feitas sob medida<span>.</span></h1>
-            <p class="font-2-l">Bicicletas elétricas de alta precisão e qualidade,  feitas sob medida para o cliente. Explore o mundo na sua velocidade com a Bikcraft.</p>
-            <a class="botao" href="./bicicletas.html">Escolha a sua</a>
+            <h1 class="font-1-xxl" data-anime="200">Bicicletas feitas sob medida<span>.</span></h1>
+            <p class="font-2-l" data-anime="300">Bicicletas elétricas de alta precisão e qualidade,  feitas sob medida para o cliente. Explore o mundo na sua velocidade com a Bikcraft.</p>
+            <a class="botao" href="./bicicletas.html" data-anime="400">Escolha a sua</a>
             </div>
-            <div>
-                <img src="./img/fotos/introducao.jpg" alt="Bicicletas eletrica preta">
-            </div>
+            <picture>
+                <source media="(max-width: 800px)" srcset="./img/bicicletas/nimbus.jpg">
+                <img src="./img/fotos/introducao.jpg" width="1280" height="1600" alt="Bicicletas eletrica preta">
+            </picture>
         </div>
     </main>
 
@@ -190,5 +195,7 @@
             <p class="font-2-m cor-6 footer-copy">Bikcraft Alguns direitos reservados.</p>
         </div>
     </footer>
+    <script src="./js/plugins/simple-anime.js"></script>;
+    <script src="./js/script.js"></script>
 </body>
 </html>
